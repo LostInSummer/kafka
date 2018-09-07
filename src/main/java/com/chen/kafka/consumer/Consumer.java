@@ -12,6 +12,7 @@ import org.apache.kafka.common.TopicPartition;
 
 public class Consumer {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Properties properties = new Properties();
 		properties.put("bootstrap.servers", "192.168.1.5:9092");

@@ -10,6 +10,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 
 public class SimpleProducerFactory {
 
+	@SuppressWarnings({ "resource", "unchecked" })
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(KafkaConfig.class);
 		KafkaTemplate<Integer, String> kafkaTemplate = (KafkaTemplate<Integer, String>) ctx.getBean("kafkaTemplate");
